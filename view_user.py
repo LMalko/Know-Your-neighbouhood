@@ -1,0 +1,2 @@
+class ViewUser():
+    pass

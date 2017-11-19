@@ -1,0 +1,2 @@
+class ModelUser():
+    pass
