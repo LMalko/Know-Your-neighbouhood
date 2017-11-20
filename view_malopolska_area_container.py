@@ -1,4 +1,4 @@
 class ViewMalopolskaAreaContainer():
 
-    def pprint(self):
+    def pprint_collection(self, collection):
         pass
