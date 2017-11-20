@@ -20,7 +20,7 @@ class ViewRoot():
         print('\n' + text + '\n')
 
     @staticmethod
-    def take_input(question):
+    def set_input(question):
         return input('\n' + str(question) + '\n')
 
     def display_menu_screen(self, menu_options):
