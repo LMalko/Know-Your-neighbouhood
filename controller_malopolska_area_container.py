@@ -12,12 +12,6 @@ class ControllerMalopolskaAreaContainer():
         self.associated_areas_objects = ControllerMalopolskaArea(self.associated_areas).get_areas_objects()
         self.ModelMalopolskaAreaContainer = ModelMalopolskaAreaContainer(self.associated_areas_objects)
 
-    def get_area_name(self):
-        pass
-
-    def area_display(self):
-        pass
-
     def get_collection_by_unit(self):
         return self.ModelMalopolskaAreaContainer.sort_units_count_by_size()
 
