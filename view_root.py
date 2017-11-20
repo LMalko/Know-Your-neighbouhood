@@ -17,7 +17,11 @@ class ViewRoot():
 
     @staticmethod
     def display_message(text):
-        print('\n\n' + text + '\n\n')
+        print('\n' + text + '\n')
+
+    @staticmethod
+    def take_input(question):
+        return input('\n' + str(question) + '\n')
 
     def display_menu_screen(self, menu_options):
         self.menu_options = menu_options
