@@ -7,6 +7,7 @@ class ControllerUser():
 
     def __init__(self):
         self.view = ViewUser()
+        self.controller_malopolska_area_container = ControllerMalopolskaAreaContainer()
 
     def validate_input(self, message):
         pass
@@ -15,7 +16,7 @@ class ControllerUser():
         pass
 
     def view_area_list(self):
-        pass
+        return self.controller_malopolska_area_container.get_pprinted_collection_by_unit()
 
     def get_top_areas_by_longest_name(self, top=3, area_type="city"):
         pass
