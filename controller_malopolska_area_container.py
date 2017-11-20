@@ -22,7 +22,7 @@ class ControllerMalopolskaAreaContainer():
         return self.ModelMalopolskaAreaContainer.sort_units_count_by_size()
 
     def get_top_areas_by_longest_name(self):
-        pass
+        return [x.set_area() for x in self.ModelMalopolskaAreaContainer.set_top_areas_by_longest_name()]
 
     def get_top_area_by_number_of_sub_units(self):
         pass
@@ -37,4 +37,5 @@ a = ControllerMalopolskaAreaContainer()
 '''
 for i in a.associated_areas_objects:
     print(i.set_area())'''
-print(a.get_collection_by_unit())
+'''print(a.get_collection_by_unit())'''
+print(a.get_top_areas_by_longest_name())
