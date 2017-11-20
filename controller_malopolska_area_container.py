@@ -29,6 +29,19 @@ class ControllerMalopolskaAreaContainer():
     def get_search_for_expression_results(self, expression):
         return self.ModelMalopolskaAreaContainer.search_for_expression(expression.lower())
 
+    def get_pprinted_collection_by_unit(self):
+        return ViewMalopolskaAreaContainer().pprint_one_column(a.get_collection_by_unit())
+
+    def get_pprinted_top_areas_by_longest_name(self):
+        pass
+
+    def get_pprinted_areas_that_belong_to_more_than_one_category(self):
+        pass
+
+    def get_pprinted_search_for_expression_results(self):
+        pass
+
+
 
 
 
@@ -36,8 +49,9 @@ a = ControllerMalopolskaAreaContainer()
 '''
 for i in a.associated_areas_objects:
     print(i.set_area())'''
-'''print(a.get_collection_by_unit())'''
+print(a.get_collection_by_unit())
+print(ViewMalopolskaAreaContainer().pprint_one_column(a.get_collection_by_unit()))
 #print(a.get_top_areas_by_longest_name())
 #print(a.get_top_county_by_number_of_municipalities())
 #print(a.get_areas_that_belong_to_more_than_one_category())
-print(a.get_search_for_expression_results("Nowy"))
+#print(a.get_search_for_expression_results("Nowy"))
