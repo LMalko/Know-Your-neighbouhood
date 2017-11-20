@@ -25,14 +25,21 @@ class ControllerRoot():
         self.menu_options = ModelRoot().get_menu_options()
         self.menu = ViewRoot().display_menu_screen(self.menu_options)
 
+    def get_input(self, message):
+        return ViewRoot().set_input(message)
+
+    def get_message(self, message):
+        return ViewRoot().display_message(message)
+
     def flow(self):
         self.initialize_model()
         self.initialize_user_controller()
         self.initialize_containers()
         self.get_user_name()
         self.menu_screen()
-        ViewRoot().display_message("Hi, " + self.user_name + ". Choose your option")
-        ViewRoot().take_input("Option: ")
+        self.get_message("Hi, " + self.user_name + ". Choose your option")
+        self.get_input("Option: ")
+        
 
 
 
