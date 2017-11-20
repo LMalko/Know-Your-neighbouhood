@@ -19,10 +19,18 @@ class ControllerRoot():
         self.malopolska_area_container = model_root.import_malopolska_area_data()
 
     def login(self):
-        self.login = view_root.display_login_screen
+        self.login = view_root.display_login_screen()
 
     def menu_screen(self):
         self.menu = view_root.display_menu_screen()
+
+    @staticmethod
+    def flow():
+        self.initialize_model()
+        self.initialize_user_controller()
+        self.initialize_containers()
+        self.login()
+        self.menu_screen()
 
 
 
