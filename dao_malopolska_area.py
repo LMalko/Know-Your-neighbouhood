@@ -13,4 +13,3 @@ class DAOMalopolskaArea():
 
     def extract_imported_data(self):
         return self.imported_data
-
