@@ -1,5 +1,5 @@
-from model_root import *
-from view_root import *
+from model_root import ModelRoot
+from view_root import ViewRoot
 from controller_user import ControllerUser
 
 
