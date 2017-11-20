@@ -9,11 +9,11 @@ class ViewRoot():
     def display_login_screen(self):
         self.clear_screen()
         _new_lines = '\n' * 4
-        user_name = input("Enter Your name: ")
-        return self.take_user_input(user_name)
+        self.user_name = input("Enter Your name: ")
+        return self.take_user_input(self.user_name)
 
-    def take_user_input(user_name):
-        return user_name
+    def take_user_input(self, user_name):
+        return self.user_name
 
     @staticmethod
     def display_message(text):
