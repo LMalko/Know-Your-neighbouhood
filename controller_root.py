@@ -22,7 +22,8 @@ class ControllerRoot():
         self.login = ViewRoot().display_login_screen()
 
     def menu_screen(self):
-        self.menu = ViewRoot().display_menu_screen()
+        self.menu_options = ModelRoot().get_menu_options()
+        self.menu = ViewRoot().display_menu_screen(self.menu_options)
 
     def flow(self):
         self.initialize_model()
