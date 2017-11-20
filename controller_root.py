@@ -39,8 +39,3 @@ class ControllerRoot():
         self.menu_screen()
         self.get_message("Hi, " + self.user_name + ". Choose your option")
         self.get_input("Option: ")
-        
-
-
-
-    
