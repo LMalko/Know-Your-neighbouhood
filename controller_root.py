@@ -18,7 +18,7 @@ class ControllerRoot():
     def initialize_containers(self):
         self.malopolska_area_container = self.model.get_malopolska_area_container()
 
-    def login(self):
+    def get_name(self):
         self.login = ViewRoot().display_login_screen()
 
     def menu_screen(self):
@@ -29,8 +29,10 @@ class ControllerRoot():
         self.initialize_model()
         self.initialize_user_controller()
         self.initialize_containers()
-        self.login()
+        self.get_name()
         self.menu_screen()
+        ViewRoot().display_message("Hi, " + self.login + ". Choose your option")
+        ViewRoot().take_input("Option: ")
 
 
 
