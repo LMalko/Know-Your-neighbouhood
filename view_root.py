@@ -19,11 +19,8 @@ class ViewRoot():
     def display_message(text):
         print('\n\n' + text + '\n\n')
 
-    def display_menu_screen(self):
-        self.menu_options = ["(1) List statistics\n",
-                        "(2) Display 3 cities with longest names\n",
-                        "(3) Display county's name with the largest number of communities\n",
-                        "(4) Display locations, that belong to more than one category\n",
-                        "(5) Advanced search\n",
-                        "(0) Exit program\n"]
-        return self.menu_options
+    def display_menu_screen(self, menu_options):
+        self.menu_options = menu_options
+        self.clear_screen()
+        for i in self.menu_options:
+            print(i)
