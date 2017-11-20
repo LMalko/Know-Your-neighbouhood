@@ -30,7 +30,7 @@ class ControllerMalopolskaAreaContainer():
         return self.ModelMalopolskaAreaContainer.search_for_expression(expression.lower())
 
     def get_pprinted_collection_by_unit(self):
-        return ViewMalopolskaAreaContainer().pprint_one_column(a.get_collection_by_unit())
+        return ViewMalopolskaAreaContainer().pprint_one_column_collection(a.get_collection_by_unit())
 
     def get_pprinted_top_areas_by_longest_name(self):
         pass
