@@ -1,5 +1,6 @@
 from model_user import ModelUser
 from view_user import ViewUser
+from controller_malopolska_area_container import ControllerMalopolskaAreaContainer
 
 
 class ControllerUser():
