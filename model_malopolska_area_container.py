@@ -21,8 +21,9 @@ class ModelMalopolskaAreaContainer():
                 ("Liczba miast na prawach powiatu", self.areas_count["miasto na prawach powiatu"]),
                 ("Liczba delegatur", self.areas_count["delegatura"])]
 
-    def set_top_areas_by_longest_name(self, top=3, area_type="city"):
-        pass
+    def set_top_areas_by_longest_name(self, top=3, area_type="miasto"):
+        self.areas_wanted = [x for x in self.area_container if x.unit == area_type]
+        return sorted(self.areas_wanted, key=lambda x: len(x.name), reverse=True)[0:top]
 
     def set_top_areas_by_number_of_sub_units(self, top=1, area_type="county"):
         pass
