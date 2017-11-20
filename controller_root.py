@@ -26,7 +26,7 @@ class ControllerRoot():
         self.menu = ViewRoot().display_menu_screen(self.menu_options)
 
     def get_input(self, message):
-        return ViewRoot().set_input(message)
+        self.get_input = ViewRoot().set_input(message)
 
     def get_message(self, message):
         return ViewRoot().display_message(message)
@@ -36,6 +36,12 @@ class ControllerRoot():
         self.initialize_user_controller()
         self.initialize_containers()
         self.get_user_name()
+        self.start_user = ControllerUser()
         self.menu_screen()
         self.get_message("Hi, " + self.user_name + ". Choose your option")
         self.get_input("Option: ")
+        if self.get_input == "1":
+            ViewRoot().clear_screen()
+            print(self.start_user.view_area_list())
+
+    
