@@ -19,5 +19,6 @@ class ModelRoot():
                              "(3) Display county's name with the largest number of communities",
                              "(4) Display locations, that belong to more than one category",
                              "(5) Advanced search",
+                             "(6) Show all areas",
                              "(0) Exit program"]
         return self.menu_options
