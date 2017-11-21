@@ -9,12 +9,6 @@ class ControllerUser():
         self.view = ViewUser()
         self.controller_malopolska_area_container = ControllerMalopolskaAreaContainer()
 
-    def validate_input(self, message):
-        pass
-
-    def start(self):
-        pass
-
     def view_area_list(self):
         return self.controller_malopolska_area_container.get_pprinted_collection_by_unit()
 
@@ -24,14 +18,8 @@ class ControllerUser():
     def get_top_county_by_number_of_municipalities(self):
         return self.controller_malopolska_area_container.get_top_county_by_number_of_municipalities()
 
-    def get_area_belonging_to_more_than_one_category(self, appearences=2):
-        pass
+    def get_area_belonging_to_more_than_one_category(self):
+        return self.controller_malopolska_area_container.get_pprinted_areas_that_belong_to_more_than_one_category()
 
     def search_for_expression(self, expression):
-        pass
-
-    def get_user_name(self):
-        pass
-
-    def delete_user(self):
         pass
