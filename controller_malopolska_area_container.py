@@ -1,8 +1,8 @@
-from view_malopolska_area_container import ViewMalopolskaAreaContainer
 from model_malopolska_area_container import ModelMalopolskaAreaContainer
-from dao_malopolska_area import DAOMalopolskaArea
+from view_malopolska_area_container import ViewMalopolskaAreaContainer
 from controller_malopolska_area import ControllerMalopolskaArea
 from model_malopolska_area import ModelMalopolskaArea
+from dao_malopolska_area import DAOMalopolskaArea
 
 
 class ControllerMalopolskaAreaContainer():
