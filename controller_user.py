@@ -18,11 +18,11 @@ class ControllerUser():
     def view_area_list(self):
         return self.controller_malopolska_area_container.get_pprinted_collection_by_unit()
 
-    def get_top_areas_by_longest_name(self, top=3, area_type="city"):
-        pass
+    def get_top_areas_by_longest_name(self):
+        return self.controller_malopolska_area_container.get_pprinted_top_areas_by_longest_name()
 
-    def get_top_areas_by_sub_units_count(self, top=1, area_type="county"):
-        pass
+    def get_top_county_by_number_of_municipalities(self):
+        return self.controller_malopolska_area_container.get_top_county_by_number_of_municipalities()
 
     def get_area_belonging_to_more_than_one_category(self, appearences=2):
         pass
