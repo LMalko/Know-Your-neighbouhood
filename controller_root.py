@@ -1,6 +1,7 @@
 from model_root import ModelRoot
 from view_root import ViewRoot
 from controller_user import ControllerUser
+import sys
 
 
 class ControllerRoot():
@@ -36,12 +37,22 @@ class ControllerRoot():
         self.initialize_user_controller()
         self.initialize_containers()
         self.get_user_name()
-        self.start_user = ControllerUser()
+        self.user = ControllerUser()
         self.loop_through_menu()
 
-    def return_data_according_to_menu_choice(self, user_input):
-        if user_input == "1":
-            return self.start_user.view_area_list()
+    def return_data_according_to_menu_choice(self, root_input):
+        if root_input == "1":
+            return self.user.view_area_list()
+        elif root_input == "2":
+            return self.user.get_top_areas_by_longest_name()
+        elif root_input == "3":
+            return self.get_message(self.user.get_top_county_by_number_of_municipalities())
+        elif root_input == "4":
+            pass
+        elif root_input == "5":
+            pass
+        elif root_input == "0":
+            sys.exit()
         else:
             return self.get_message("No such choice")
 
