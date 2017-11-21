@@ -11,7 +11,7 @@ class ViewMalopolskaAreaContainer():
         print(self.set_elements_of_table_construction()[0])
 
     def pprint_two_columns_collection(self, collection, table_header=None):
-        print("\n\nFound " + str(len(collection)) + " location(s):\n\n",
+        print("\n\nFound {} location(s):\n\n".format(str(len(collection))),
               self.set_elements_of_table_construction()[4],
               self.set_elements_of_table_construction(table_header)[3],
               self.set_elements_of_table_construction()[5],
@@ -21,7 +21,7 @@ class ViewMalopolskaAreaContainer():
         print(self.set_elements_of_table_construction()[4])
 
     def pprint_lines(self, collection, table_header):
-        print("\n" + table_header + "\n")
+        print("\n{}\n".format(table_header))
         for i in collection:
             print("{}. {}".format(collection.index(i) + 1, i))
 
