@@ -48,7 +48,7 @@ class ControllerRoot():
         elif root_input == "3":
             return self.get_message(self.user.get_top_county_by_number_of_municipalities())
         elif root_input == "4":
-            pass
+            return self.user.get_area_belonging_to_more_than_one_category()
         elif root_input == "5":
             pass
         elif root_input == "0":
