@@ -16,7 +16,7 @@ class ControllerMalopolskaAreaContainer():
         return self.ModelMalopolskaAreaContainer.sort_units_count_by_size()
 
     def get_top_areas_by_longest_name(self):
-        return [x.set_area() for x in self.ModelMalopolskaAreaContainer.set_top_areas_by_longest_name()]
+        return [x.__str__() for x in self.ModelMalopolskaAreaContainer.set_top_areas_by_longest_name()]
 
     def get_top_county_by_number_of_municipalities(self):
         county_number = self.ModelMalopolskaAreaContainer.set_top_county_by_number_of_municipalities()
@@ -36,7 +36,8 @@ class ControllerMalopolskaAreaContainer():
         return ViewMalopolskaAreaContainer().pprint_lines(self.get_top_areas_by_longest_name(), "Top 3 cities")
 
     def get_pprinted_areas_that_belong_to_more_than_one_category(self):
-        pass
+        return ViewMalopolskaAreaContainer().pprint_lines(self.get_areas_that_belong_to_more_than_one_category(),
+                                                          "Areas arranged by no. of categories, then alphabetically.")
 
     def get_pprinted_search_for_expression_results(self):
         pass
@@ -46,8 +47,6 @@ class ControllerMalopolskaAreaContainer():
 
 
 a = ControllerMalopolskaAreaContainer()
-print(a.get_top_county_by_number_of_municipalities())
-
-#print(a.get_top_county_by_number_of_municipalities())
-#print(a.get_areas_that_belong_to_more_than_one_category())
+for i in a.associated_areas_objects:
+    print(dir(i))
 #print(a.get_search_for_expression_results("Nowy"))
