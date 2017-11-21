@@ -26,22 +26,30 @@ class ControllerRoot():
         self.menu = ViewRoot().display_menu_screen(self.menu_options)
 
     def get_input(self, message):
-        self.get_input = ViewRoot().set_input(message)
+        return ViewRoot().set_input(message)
 
     def get_message(self, message):
         return ViewRoot().display_message(message)
 
-    def flow(self):
+    def initialize_data(self):
         self.initialize_model()
         self.initialize_user_controller()
         self.initialize_containers()
         self.get_user_name()
         self.start_user = ControllerUser()
-        self.menu_screen()
-        self.get_message("Hi, " + self.user_name + ". Choose your option")
-        self.get_input("Option: ")
-        if self.get_input == "1":
-            ViewRoot().clear_screen()
-            print(self.start_user.view_area_list())
+        self.loop_through_menu()
 
-    
+    def return_data_according_to_menu_choice(self, user_input):
+        if user_input == "1":
+            return self.start_user.view_area_list()
+        else:
+            return self.get_message("No such choice")
+
+    def loop_through_menu(self):
+        while True:
+            self.menu_screen()
+            self.get_message("Hi, " + self.user_name + ". Choose your option")
+            root_input = self.get_input("Option: ")
+            ViewRoot().clear_screen()
+            self.return_data_according_to_menu_choice(root_input)
+            root_input = self.get_input("Press anything to continue.")
