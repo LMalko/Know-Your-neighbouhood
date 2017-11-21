@@ -14,7 +14,7 @@ class ControllerRoot():
         self.model = ModelRoot()
 
     def initialize_user_controller(self):
-        self.user_controller = ControllerUser()
+        return ControllerUser(self.user_name)
 
     def initialize_containers(self):
         self.malopolska_area_container = self.model.get_malopolska_area_container()
@@ -34,10 +34,9 @@ class ControllerRoot():
 
     def initialize_data(self):
         self.initialize_model()
-        self.initialize_user_controller()
         self.initialize_containers()
         self.get_user_name()
-        self.user = ControllerUser()
+        self.user = self.initialize_user_controller()
         self.loop_through_menu()
 
     def return_data_according_to_menu_choice(self, root_input):
@@ -50,7 +49,8 @@ class ControllerRoot():
         elif root_input == "4":
             return self.user.get_area_belonging_to_more_than_one_category()
         elif root_input == "5":
-            pass
+            root_input = self.get_input("Enter word/ expression You are looking for: ")
+            return self.user.search_for_expression(root_input)
         elif root_input == "6":
             return self.user.get_areas_collection()
         elif root_input == "0":
