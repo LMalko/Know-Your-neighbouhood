@@ -26,29 +26,22 @@ class ControllerMalopolskaAreaContainer():
     def get_areas_that_belong_to_more_than_one_category(self):
         return self.ModelMalopolskaAreaContainer.set_areas_that_belong_to_more_than_one_category()
 
-    def get_search_for_expression_results(self, expression):
-        return self.ModelMalopolskaAreaContainer.search_for_expression(expression.lower())
+    def get_search_for_expression(self, expression):
+        return self.ModelMalopolskaAreaContainer.return_sorted_expression_findings(expression.lower())
 
     def get_pprinted_all_areas_collection(self):
-        return ViewMalopolskaAreaContainer().pprint_lines(sorted(self.associated_areas_objects, key=lambda x: x.name),
-                                                          "All Malopolska Areas")
+        ViewMalopolskaAreaContainer().pprint_lines(sorted(self.associated_areas_objects, key=lambda x: x.name),
+                                                   "All Malopolska Areas")
 
     def get_pprinted_collection_by_unit(self):
-        return ViewMalopolskaAreaContainer().pprint_one_column_collection(self.get_collection_by_unit(), "MAŁOPOLSKIE")
+        ViewMalopolskaAreaContainer().pprint_one_column_collection(self.get_collection_by_unit(), "MAŁOPOLSKIE")
 
     def get_pprinted_top_areas_by_longest_name(self):
-        return ViewMalopolskaAreaContainer().pprint_lines(self.get_top_areas_by_longest_name(), "Top 3 cities")
+        ViewMalopolskaAreaContainer().pprint_lines(self.get_top_areas_by_longest_name(), "Top 3 cities")
 
     def get_pprinted_areas_that_belong_to_more_than_one_category(self):
-        return ViewMalopolskaAreaContainer().pprint_lines(self.get_areas_that_belong_to_more_than_one_category(),
-                                                          "Areas arranged by no. of categories, then alphabetically.")
+        ViewMalopolskaAreaContainer().pprint_lines(self.get_areas_that_belong_to_more_than_one_category(),
+                                                   "Areas arranged by no. of categories, then alphabetically.")
 
-    def get_pprinted_search_for_expression_results(self):
-        pass
-
-
-
-
-
-a = ControllerMalopolskaAreaContainer()
-#print(a.get_search_for_expression_results("Nowy"))
+    def get_pprinted_search_for_expression_results(self, expression):
+        ViewMalopolskaAreaContainer().pprint_two_columns_collection(self.get_search_for_expression(expression))
