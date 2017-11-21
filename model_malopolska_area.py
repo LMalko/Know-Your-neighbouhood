@@ -9,7 +9,7 @@ class ModelMalopolskaArea():
         self.municipality = municipality
         self.rgmi = rgmi
 
-    def set_area(self):
+    def __str__(self):
         return "{} which is {} from no.{} county, no.{} municipality, no.{} rgmi".format(self.name,
                                                                                          self.unit,
                                                                                          self.county,
