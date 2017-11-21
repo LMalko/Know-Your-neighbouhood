@@ -49,14 +49,14 @@ class ControllerRoot():
         elif root_input == "4":
             return self.user.get_area_belonging_to_more_than_one_category()
         elif root_input == "5":
-            root_input = self.get_input("Enter word/ expression You are looking for: ")
+            root_input = self.get_input("Searching for: ")
             return self.user.search_for_expression(root_input)
         elif root_input == "6":
             return self.user.get_areas_collection()
         elif root_input == "0":
             sys.exit()
         else:
-            return self.get_message("No such choice")
+            return self.get_message("No such choice.")
 
     def loop_through_menu(self):
         while True:
