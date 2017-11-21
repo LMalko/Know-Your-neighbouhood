@@ -10,4 +10,4 @@ class App():
 
 if __name__ == "__main__":
     initiate_program = App()
-    initiate_program.root.flow()
+    initiate_program.root.initialize_data()
