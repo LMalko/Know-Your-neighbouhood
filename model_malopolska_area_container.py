@@ -46,8 +46,9 @@ class ModelMalopolskaAreaContainer():
                 result.append("{} belongs to {} categories.".format(key, value))
         return self.sort_by_number_of_municipalities_then_by_name(result)
 
-    def search_for_expression(self, expression):
-        return [x for x in self.area_container if expression in x.name.lower()]
+    def return_sorted_expression_findings(self, expression):
+        result = [(x.name, x.unit) for x in self.area_container if expression in x.name.lower()]
+        return sorted(result, key=lambda x: (x[0], x[1]))
 
     def sort_by_number_of_municipalities_then_by_name(self, collection):
         collection = sorted(collection, key=lambda x: x)
