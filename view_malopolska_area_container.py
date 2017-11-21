@@ -1,6 +1,6 @@
 class ViewMalopolskaAreaContainer():
 
-    def pprint_one_column_collection(self, collection, table_header):
+    def pprint_one_column_collection(self, collection, table_header=None):
         print(self.set_elements_of_table_construction()[0],
               self.set_elements_of_table_construction(table_header)[2],
               sep='\n')
@@ -10,7 +10,7 @@ class ViewMalopolskaAreaContainer():
                   sep='\n')
         print(self.set_elements_of_table_construction()[0])
 
-    def pprint_two_columns_collection(self, collection, table_header):
+    def pprint_two_columns_collection(self, collection, table_header=None):
         print(self.set_elements_of_table_construction()[4],
               self.set_elements_of_table_construction(table_header)[3],
               self.set_elements_of_table_construction()[5],
