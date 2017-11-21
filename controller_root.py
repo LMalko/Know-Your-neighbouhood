@@ -42,7 +42,7 @@ class ControllerRoot():
 
     def return_data_according_to_menu_choice(self, root_input):
         if root_input == "1":
-            return self.user.view_area_list()
+            return self.user.get_units_collection()
         elif root_input == "2":
             return self.user.get_top_areas_by_longest_name()
         elif root_input == "3":
@@ -51,6 +51,8 @@ class ControllerRoot():
             return self.user.get_area_belonging_to_more_than_one_category()
         elif root_input == "5":
             pass
+        elif root_input == "6":
+            return self.user.get_areas_collection()
         elif root_input == "0":
             sys.exit()
         else:
