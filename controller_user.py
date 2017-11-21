@@ -5,9 +5,10 @@ from controller_malopolska_area_container import ControllerMalopolskaAreaContain
 
 class ControllerUser():
 
-    def __init__(self):
+    def __init__(self, username):
         self.view = ViewUser()
         self.controller_malopolska_area_container = ControllerMalopolskaAreaContainer()
+        self.user = ModelUser(username)
 
     def get_units_collection(self):
         return self.controller_malopolska_area_container.get_pprinted_collection_by_unit()
@@ -25,4 +26,4 @@ class ControllerUser():
         return self.controller_malopolska_area_container.get_pprinted_areas_that_belong_to_more_than_one_category()
 
     def search_for_expression(self, expression):
-        pass
+        return self.controller_malopolska_area_container.get_pprinted_search_for_expression_results(expression)
