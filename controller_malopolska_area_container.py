@@ -33,7 +33,7 @@ class ControllerMalopolskaAreaContainer():
         return ViewMalopolskaAreaContainer().pprint_one_column_collection(self.get_collection_by_unit(), "MAŁOPOLSKIE")
 
     def get_pprinted_top_areas_by_longest_name(self):
-        pass
+        return ViewMalopolskaAreaContainer().pprint_lines(self.get_top_areas_by_longest_name(), "Top 3 cities")
 
     def get_pprinted_areas_that_belong_to_more_than_one_category(self):
         pass
@@ -45,13 +45,9 @@ class ControllerMalopolskaAreaContainer():
 
 
 
-#a = ControllerMalopolskaAreaContainer()
-'''
-for i in a.associated_areas_objects:
-    print(i.set_area())'''
-#print(a.get_collection_by_unit())
-#print(ViewMalopolskaAreaContainer().pprint_collection(a.get_collection_by_unit()))
-#print(a.get_top_areas_by_longest_name())
+a = ControllerMalopolskaAreaContainer()
+print(a.get_top_county_by_number_of_municipalities())
+
 #print(a.get_top_county_by_number_of_municipalities())
 #print(a.get_areas_that_belong_to_more_than_one_category())
 #print(a.get_search_for_expression_results("Nowy"))
