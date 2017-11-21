@@ -29,6 +29,10 @@ class ControllerMalopolskaAreaContainer():
     def get_search_for_expression_results(self, expression):
         return self.ModelMalopolskaAreaContainer.search_for_expression(expression.lower())
 
+    def get_pprinted_all_areas_collection(self):
+        return ViewMalopolskaAreaContainer().pprint_lines(sorted(self.associated_areas_objects, key=lambda x: x.name),
+                                                          "All Malopolska Areas")
+
     def get_pprinted_collection_by_unit(self):
         return ViewMalopolskaAreaContainer().pprint_one_column_collection(self.get_collection_by_unit(), "MAŁOPOLSKIE")
 
@@ -47,6 +51,4 @@ class ControllerMalopolskaAreaContainer():
 
 
 a = ControllerMalopolskaAreaContainer()
-for i in a.associated_areas_objects:
-    print(dir(i))
 #print(a.get_search_for_expression_results("Nowy"))
