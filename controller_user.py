@@ -11,19 +11,19 @@ class ControllerUser():
         self.user = ModelUser(username)
 
     def get_units_collection(self):
-        return self.controller_malopolska_area_container.get_pprinted_collection_by_unit()
+        return self.controller_malopolska_area_container.set_pprinted_collection_by_unit()
 
     def get_areas_collection(self):
-        return self.controller_malopolska_area_container.get_pprinted_all_areas_collection()
+        return self.controller_malopolska_area_container.set_pprinted_all_areas_collection()
 
     def get_top_areas_by_longest_name(self):
-        return self.controller_malopolska_area_container.get_pprinted_top_areas_by_longest_name()
+        return self.controller_malopolska_area_container.set_pprinted_top_areas_by_longest_name()
 
     def get_top_county_by_number_of_municipalities(self):
         return self.controller_malopolska_area_container.get_top_county_by_number_of_municipalities()
 
     def get_area_belonging_to_more_than_one_category(self):
-        return self.controller_malopolska_area_container.get_pprinted_areas_that_belong_to_more_than_one_category()
+        return self.controller_malopolska_area_container.set_pprinted_areas_that_belong_to_more_than_one_category()
 
     def get_search_for_expression_results(self, expression):
-        return self.controller_malopolska_area_container.get_pprinted_search_for_expression_results(expression)
+        return self.controller_malopolska_area_container.set_pprinted_search_for_expression_results(expression)
