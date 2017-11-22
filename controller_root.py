@@ -50,7 +50,7 @@ class ControllerRoot():
             return self.user.get_area_belonging_to_more_than_one_category()
         elif root_input == "5":
             root_input = self.get_input("Searching for: ")
-            return self.user.search_for_expression(root_input)
+            return self.user.get_search_for_expression_results(root_input)
         elif root_input == "6":
             return self.user.get_areas_collection()
         elif root_input == "0":

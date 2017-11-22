@@ -25,5 +25,5 @@ class ControllerUser():
     def get_area_belonging_to_more_than_one_category(self):
         return self.controller_malopolska_area_container.get_pprinted_areas_that_belong_to_more_than_one_category()
 
-    def search_for_expression(self, expression):
+    def get_search_for_expression_results(self, expression):
         return self.controller_malopolska_area_container.get_pprinted_search_for_expression_results(expression)
